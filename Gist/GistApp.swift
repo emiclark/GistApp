@@ -6,7 +6,7 @@ import SwiftUI
 struct GistApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen(viewModel: HomeScreenViewModel())
         }
     }
 }
