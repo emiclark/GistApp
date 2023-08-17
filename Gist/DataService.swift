@@ -37,11 +37,24 @@ class DataService {
     }.resume()
   }
   
+  
+  func createNewGist(completion: @escaping (Result<[Gist], Error>) -> Void) {
+    let postComponents = createURLComponents(path: "/gists")
+    guard let composedURL = postComponents.url
+    else {
+      print("url creation failed")
+      return
+    }
+    
+    var postRequest = URLRequest(url: composedURL)
+    postRequest.httpMethod = "POST"
+  }
+  
   func createURLComponents(path: String) -> URLComponents {
-    var componentURL = URLComponents()
-    componentURL.scheme = "https"
-    componentURL.host = "api.github.com"
-    componentURL.path = path
-    return componentURL
+    var components = URLComponents()
+    components.scheme = "https"
+    components.host = "api.github.com"
+    components.path = path
+    return components
   }
 }
