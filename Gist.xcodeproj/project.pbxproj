@@ -13,6 +13,7 @@
 		E1B9FF692A8D781F0024ABDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B9FF682A8D781F0024ABDD /* Preview Assets.xcassets */; };
 		E1B9FF7C2A8E5FD20024ABDD /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9FF7B2A8E5FD20024ABDD /* HomeScreenViewModel.swift */; };
 		E1B9FF7E2A8E6A770024ABDD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9FF7D2A8E6A770024ABDD /* DataService.swift */; };
+		E1B9FF802A8E75DC0024ABDD /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9FF7F2A8E75DC0024ABDD /* HomeScreenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E1B9FF682A8D781F0024ABDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1B9FF7B2A8E5FD20024ABDD /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		E1B9FF7D2A8E6A770024ABDD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E1B9FF7F2A8E75DC0024ABDD /* HomeScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				E1B9FF622A8D78180024ABDD /* HomeScreen.swift */,
 				E1B9FF7B2A8E5FD20024ABDD /* HomeScreenViewModel.swift */,
+				E1B9FF7F2A8E75DC0024ABDD /* HomeScreenModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B9FF802A8E75DC0024ABDD /* HomeScreenModel.swift in Sources */,
 				E1B9FF632A8D78180024ABDD /* HomeScreen.swift in Sources */,
 				E1B9FF7C2A8E5FD20024ABDD /* HomeScreenViewModel.swift in Sources */,
 				E1B9FF612A8D78180024ABDD /* GistApp.swift in Sources */,

@@ -11,12 +11,12 @@ struct HomeScreen: View {
           Text("Hello, world!")
         Button(
           "Fetch gists",
-          action: DataService.shared.fetchGists
+          action: viewModel.onButtonTapped
         )
       }
       .padding()
       .onAppear {
-        DataService.shared.fetchGists()
+        viewModel.onAppear()
       }
   }
 }
