@@ -14,6 +14,7 @@
 		E1B9FF7C2A8E5FD20024ABDD /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9FF7B2A8E5FD20024ABDD /* HomeScreenViewModel.swift */; };
 		E1B9FF7E2A8E6A770024ABDD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9FF7D2A8E6A770024ABDD /* DataService.swift */; };
 		E1B9FF802A8E75DC0024ABDD /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9FF7F2A8E75DC0024ABDD /* HomeScreenModel.swift */; };
+		E1B9FF822A8EB5900024ABDD /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9FF812A8EB5900024ABDD /* ListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E1B9FF7B2A8E5FD20024ABDD /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		E1B9FF7D2A8E6A770024ABDD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		E1B9FF7F2A8E75DC0024ABDD /* HomeScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
+		E1B9FF812A8EB5900024ABDD /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				E1B9FF622A8D78180024ABDD /* HomeScreen.swift */,
 				E1B9FF7B2A8E5FD20024ABDD /* HomeScreenViewModel.swift */,
 				E1B9FF7F2A8E75DC0024ABDD /* HomeScreenModel.swift */,
+				E1B9FF812A8EB5900024ABDD /* ListItem.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B9FF822A8EB5900024ABDD /* ListItem.swift in Sources */,
 				E1B9FF802A8E75DC0024ABDD /* HomeScreenModel.swift in Sources */,
 				E1B9FF632A8D78180024ABDD /* HomeScreen.swift in Sources */,
 				E1B9FF7C2A8E5FD20024ABDD /* HomeScreenViewModel.swift in Sources */,

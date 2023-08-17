@@ -1,7 +1,7 @@
 import Foundation
 
-struct Gist: Encodable {
-  var id: String?
+struct Gist: Identifiable, Encodable {
+  var id: String
   var isPublic: Bool
   var description: String
   var files: [String: File]

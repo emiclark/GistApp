@@ -8,19 +8,30 @@ struct HomeScreen: View {
           Image(systemName: "globe")
               .imageScale(.large)
               .foregroundColor(.accentColor)
-          Text("Hello, world!")
+        HStack {
+          Button(
+            "Encode new gist",
+            action: viewModel.onEncodeGistTapped
+          )
+          Text(" | ")
+          Button(
+            "Star gist",
+            action: viewModel.onStarGistTapped
+          )
+        }
+        .padding()
         Button(
           "Fetch gists",
           action: viewModel.onButtonTapped
         )
-        Button(
-          "Encode new gist",
-          action: viewModel.onEncodeGistTapped
-        )
-        Button(
-          "Star gist",
-          action: viewModel.onStarGistTapped
-        )
+        List {
+          ForEach(viewModel.feedGists) { item in
+            ListItem(
+              id: item.id,
+              description: item.description
+            )
+          }
+        }
       }
       .padding()
   }
