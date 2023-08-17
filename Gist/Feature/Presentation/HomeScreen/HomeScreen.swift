@@ -17,6 +17,10 @@ struct HomeScreen: View {
           "Encode new gist",
           action: viewModel.onEncodeGistTapped
         )
+        Button(
+          "Star gist",
+          action: viewModel.onStarGistTapped
+        )
       }
       .padding()
   }
