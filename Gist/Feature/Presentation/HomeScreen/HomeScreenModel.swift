@@ -1,6 +1,6 @@
 import Foundation
 
-struct Gist: Codable {
+struct Gist: Encodable {
   var id: String
   var isPublic: Bool
   var description: String
@@ -9,6 +9,15 @@ struct Gist: Codable {
     case id, description, isPublic = "public"
   }
   
+  func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    try container.encode(id, forKey: .id)
+    try container.encode(isPublic, forKey: .isPublic)
+    try container.encodeIfPresent(description, forKey: .description)
+  }
+}
+
+extension Gist: Decodable {
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     self.id = try container.decode(String.self, forKey: .id)
