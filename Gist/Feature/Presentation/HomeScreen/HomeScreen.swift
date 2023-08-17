@@ -15,9 +15,6 @@ struct HomeScreen: View {
         )
       }
       .padding()
-      .onAppear {
-        viewModel.onAppear()
-      }
   }
 }
 

@@ -5,7 +5,7 @@ class DataService {
   
   fileprivate let baseURLString = "https://api.github.com"
   
-  func fetchGists(completion: @escaping (Result<Any, Error>) -> Void) {
+  func fetchGists(completion: @escaping (Result<[Gist], Error>) -> Void) {
     let componentURL = createURLComponents(path: "/gists/public")
     guard let validURL = componentURL.url
     else {
@@ -27,9 +27,9 @@ class DataService {
       }
 
       do {
-        let json = try JSONSerialization.jsonObject(with: validData, options: [])
-        print(json)
-        completion(.success(json))
+        let gists = try JSONDecoder().decode([Gist].self, from: validData)
+        print(gists)
+        completion(.success(gists))
       } catch let error {
         print(error)
       }
