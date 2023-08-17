@@ -13,11 +13,16 @@ struct HomeScreen: View {
           "Fetch gists",
           action: viewModel.onButtonTapped
         )
+        Button(
+          "Encode new gist",
+          action: viewModel.onEncodeGistTapped
+        )
+        Button(
+          "Star gist",
+          action: viewModel.onStarGistTapped
+        )
       }
       .padding()
-      .onAppear {
-        viewModel.onAppear()
-      }
   }
 }
 
