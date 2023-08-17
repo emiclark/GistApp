@@ -5,8 +5,15 @@ class DataService {
   
   fileprivate let baseURLString = "https://api.github.com"
   
+  let customSession: URLSession = {
+    let customConfig = URLSessionConfiguration.default
+    customConfig.networkServiceType = .video
+    customConfig.allowsCellularAccess = true
+    return URLSession(configuration: customConfig)
+  }()
+  
   func fetchGists(completion: @escaping (Result<[Gist], Error>) -> Void) {
-    let componentURL = createURLComponents(path: "/gists/public")
+    let componentURL = createURLComponents(path: "/gists")
     guard let validURL = componentURL.url
     else {
       print(">> url failed")
@@ -50,7 +57,7 @@ class DataService {
   // POST new gist
   func createNewGist(completion: @escaping (Result<[Gist], Error>) -> Void) {
     // create new gist
-    let newGist = Gist(id: nil, isPublic: true, description: "a new gist", files: ["gist.txt" : File(content: "it's almost there")])
+    let newGist = Gist(id: "123", isPublic: true, description: "a new gist", files: ["gist.txt" : File(content: "it's almost there")])
                                                                                    
     let postComponents = createURLComponents(path: "/gists")
     guard let composedURL = postComponents.url
