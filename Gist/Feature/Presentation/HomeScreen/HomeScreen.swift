@@ -8,18 +8,18 @@ struct HomeScreen: View {
           Image(systemName: "globe")
               .imageScale(.large)
               .foregroundColor(.accentColor)
-        HStack {
-          Button(
-            "Encode new gist",
-            action: viewModel.onEncodeGistTapped
-          )
-          Text(" | ")
-          Button(
-            "Star gist",
-            action: viewModel.onStarGistTapped
-          )
-        }
-        .padding()
+//        HStack {
+//          Button(
+//            "Encode new gist",
+//            action: viewModel.onEncodeGistTapped
+//          )
+//          Text(" | ")
+//          Button(
+//            "Star gist",
+//            action: viewModel.onStarGistTapped
+//          )
+//        }
+//        .padding()
         Button(
           "Fetch gists",
           action: viewModel.onButtonTapped
@@ -32,9 +32,17 @@ struct HomeScreen: View {
             )
           }
         }
+        .listStyle(.plain)
       }
       .padding()
   }
+}
+
+struct View2: View {
+    var body: some View {
+        Text("Hello, World!")
+        .background(Color.green)
+    }
 }
 
 struct HomeScreen_Previews: PreviewProvider {

@@ -11,15 +11,14 @@ struct ListItem: View {
   
   private var contentView: some View {
     VStack(alignment: .leading) {
-      HStack(alignment: .top) {
         Text("id: \(id)")
-        Text("\(description)")
+        .font(.footnote)
+        Text("description: \(description)")
       }
       .frame(maxWidth: .infinity, alignment: .leading)
       .padding(10)
       .padding(.horizontal, 10)
       .font(.title3)
-    }
   }
 }
 
